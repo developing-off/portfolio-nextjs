@@ -4,8 +4,12 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { MenuIcon, XIcon } from "@heroicons/react/solid";
 import MenuOverlay from "./MenuOverlay";
-
+import Image from "next/image";
 const navLinks = [
+  {
+    title: "Home",
+    path: "#home",
+  },
   {
     title: "About",
     path: "#about",
@@ -28,10 +32,17 @@ const Navbar = () => {
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
+          className="text-xl md:text-4xl text-white font-semibold"
         >
-          LOGO
+          Sarni Younes
         </Link>
+        <Image
+          src="/images/logo.png"
+          width={150}
+          height={150}
+          alt="hero image"
+        />
+
         <div className="mobile-menu block md:hidden">
           {!navbarOpen ? (
             <button

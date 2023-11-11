@@ -8,12 +8,12 @@ const TAB_data = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
-        <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
+        <li>PHP</li>
+        <li>VB.net</li>
+        <li>MariaDB/MySQl</li>
+        <li>docker</li>
+        <li>Network</li>
+        <li>GIT</li>
       </ul>
     ),
   },
@@ -22,8 +22,8 @@ const TAB_data = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>University of Oran, IGMO</li>
+        <li>baccalaureat sciences experimentales - 2023</li>
       </ul>
     ),
   },
@@ -32,8 +32,11 @@ const TAB_data = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Certificat SQL (base de donnée mysql) fourni par SOLOLEARN.COM</li>
+        <li>Certificat PHP (language de programmation backend)</li>
+        <li>
+          Certificat HTML & CSS (langage de balises pour hypertexte)
+        </li>
       </ul>
     ),
   },
@@ -49,7 +52,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white">
+    <section id="about" className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image
           alt="about section image"
@@ -60,10 +63,12 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque
-            impedit quasi cum, odit animi magnam maxime explicabo iure maiores
-            illo numquam, unde repellat libero aperiam optio veritatis iusto,
-            eos exercitationem!
+            I am a full stack web developer with a passion for creating
+            interactive and responsive web applications. I have experience
+            working with Php, MariaDB, JavaScript, HTML, CSS, Node.js, laravel
+            and Git. I am a quick learner and I am always looking to expand my
+            knowledge and skill set. I am a team player and I am excited to work
+            with others to create amazing applications.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -88,8 +93,8 @@ const AboutSection = () => {
               Certifications{" "}
             </TabButton>
           </div>
-          <div className="mt-8">
-            <div className="mt-8">
+          <div className="">
+            <div className="mt-4">
               {TAB_data.find((t) => t.id === tab).content}
             </div>
           </div>
